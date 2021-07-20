@@ -17,40 +17,40 @@ public class App {
         try {
             File myObj = new File("D:/javas/lang_in_30/equls/src/compFile/test"+".fast");
             Scanner myReader = new Scanner(myObj);
-
+            
             while (myReader.hasNextLine()) {
                 String[] data = assemble(myReader.nextLine().split(" ")).split(":");
 
-                if (numerate(data[0]) == numerate("idx")) {
+                if (numerate(data[0]) == numerate("3110")) {
                     index = Integer.parseInt(data[1]);
                 }
-                if (numerate(data[0]) == numerate("add")) {
+                if (numerate(data[0]) == numerate("2870")) {
                     int_con += Integer.parseInt(data[1]);
                 }
-                if (numerate(data[0]) == numerate("sub")) {
+                if (numerate(data[0]) == numerate("3221")) {
                     int_con -= Integer.parseInt(data[1]);
                 }
-                if (numerate(data[0]) == numerate("mul")) {
+                if (numerate(data[0]) == numerate("3241")) {
                     int_con *= Integer.parseInt(data[1]);
                 }
-                if (numerate(data[0]) == numerate("div")) {
+                if (numerate(data[0]) == numerate("3099")) {
                     int_con /= Integer.parseInt(data[1]);
                 }
-                if (numerate(data[0]) == numerate("mod")) {
+                if (numerate(data[0]) == numerate("3111")) {
                     int_con %= Integer.parseInt(data[1]);
                 }
-                if (numerate(data[0]) == numerate("cat")) {
+                if (numerate(data[0]) == numerate("2985")) {
                     str_con += data[1];
                 }
-                if (numerate(data[0]) == numerate("eql")) {
-                    if (numerate(data[1]) == numerate("str")) {
+                if (numerate(data[0]) == numerate("3117")) {
+                    if (numerate(data[1]) == numerate("3338")) {
                         if (str_con == str_cells[index]) {
                             bool_con = true;
                         }else{
                             bool_con = false;
                         }
                     }
-                    if (numerate(data[1]) == numerate("int")) {
+                    if (numerate(data[1]) == numerate("3188")) {
                         if (int_con == int_cells[index]) {
                             bool_con = true;
                         }else{
@@ -58,39 +58,39 @@ public class App {
                         }
                     }
                 }
-                if (numerate(data[0]) == numerate("incIdx")) {
+                if (numerate(data[0]) == numerate("6909")) {
                     index += Integer.parseInt(data[1]);
                 }
-                if (numerate(data[0]) == numerate("decIdx")) {
+                if (numerate(data[0]) == numerate("6760")) {
                     index -= Integer.parseInt(data[1]);
                 }
-                if (numerate(data[0]) == numerate("set")) {
+                if (numerate(data[0]) == numerate("3189")) {
                     // System.out.println("set");
-                    if (numerate(data[1]) == numerate("str")) {
+                    if (numerate(data[1]) == numerate("3338")) {
                         // System.out.println("--str");
                         str_cells[index] = data[2];
                     }
-                    if (numerate(data[1]) == numerate("int")) {
+                    if (numerate(data[1]) == numerate("3188")) {
                         // System.out.println("--int");
                         int_cells[index] = Integer.parseInt(data[2]);
                     }
                 }
-                if (numerate(data[0]) == numerate("get")) {
+                if (numerate(data[0]) == numerate("3069")) {
                     // System.out.println("get");
-                    if (numerate(data[1]) == numerate("str")) {
+                    if (numerate(data[1]) == numerate("3338")) {
                         // System.out.println("--str");
                         str_con = str_cells[Integer.parseInt(data[2])];
                     }
-                    if (numerate(data[1]) == numerate("int")) {
+                    if (numerate(data[1]) == numerate("3188")) {
                         // System.out.println("--int");
                         int_con = int_cells[Integer.parseInt(data[2])];
                     }
                 }
-                if (numerate(data[0]) == numerate("print")) {
-                    if (numerate(data[1]) == numerate("str")) {
+                if (numerate(data[0]) == numerate("5828")) {
+                    if (numerate(data[1]) == numerate("3338")) {
                         System.out.println(str_con);
                     }
-                    if (numerate(data[1]) == numerate("int")) {
+                    if (numerate(data[1]) == numerate("3188")) {
                         System.out.println(int_con);
                     }
                 }
