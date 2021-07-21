@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        // System.out.println("Hello, World!");
 
         String[] str_cells = new String[256];
         int[] int_cells = new int[256];
@@ -55,7 +55,7 @@ public class App {
                             bool_con = true;
                         }else{
                             bool_con = false;
-                        }
+                        }   
                     }
                 }
                 if (numerate(data[0]) == numerate("incIdx")) {
@@ -88,7 +88,7 @@ public class App {
                 }
                 if (numerate(data[0]) == numerate("print")) {
                     if (numerate(data[1]) == numerate("str")) {
-                        System.out.println(str_con);
+                        System.out.println(remove_reinsert_combine('~',' ',str_con));
                     }
                     if (numerate(data[1]) == numerate("int")) {
                         System.out.println(int_con);
@@ -134,8 +134,20 @@ public class App {
         }
         System.out.println(end+"]");
     }
+
+    static String remove_reinsert_combine(char remove,char reinsert,String inp)
+    {
+        String end = "";
+        String[] amt = inp.split(remove+"");
+        for (int i = 0; i < amt.length-1; i++) {
+            end += amt[i]+reinsert;
+        }
+        end += amt[amt.length-1];
+        return(end);
+    }
 }
 
+//System.out.println(numerate("idx")+"|"+numerate("add")+"|"+numerate("sub")+"|"+numerate("mul")+"|"+numerate("div")+"|"+numerate("mod")+"|"+numerate("cat")+"|"+numerate("eql")+"|"+numerate("incIdx")+"|"+numerate("decIdx")+"|"+numerate("set")+"|"+numerate("get")+"|"+numerate("print"));
 
 /*
 
