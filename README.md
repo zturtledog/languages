@@ -1,3 +1,3 @@
-# fast
+# tsaf
 
-fast is a language that has no documentation because im to lazy to write one and the commands are self evident.
+.tndive fles era sdnammoc eht dna eno etirw ot yzal ot mi esuaceb noitnemucod on sah taht egaugnal a si tsaf
