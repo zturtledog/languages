@@ -88,7 +88,7 @@ public class App {
                 }
                 if (numerate(data[0]) == numerate("5828")) {
                     if (numerate(data[1]) == numerate("3338")) {
-                        System.out.println(str_con);
+                        System.out.println(remove_reinsert_combine('~',' ',str_con));
                     }
                     if (numerate(data[1]) == numerate("3188")) {
                         System.out.println(int_con);
@@ -133,6 +133,17 @@ public class App {
             end+=st[i]+",";
         }
         System.out.println(end+"]");
+    }
+    
+    static String remove_reinsert_combine(char remove,char reinsert,String inp)
+    {
+        String end = "";
+        String[] amt = inp.split(remove+"");
+        for (int i = 0; i < amt.length-1; i++) {
+            end += amt[i]+reinsert;
+        }
+        end += amt[amt.length-1];
+        return(end);
     }
 }
 
