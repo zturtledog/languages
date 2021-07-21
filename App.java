@@ -1,9 +1,14 @@
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
         // System.out.println("Hello, World!");
+
+        InputStreamReader input = new InputStreamReader(System.in); 
+        BufferedReader reader = new BufferedReader(input); 
 
         String[] str_cells = new String[256];
         int[] int_cells = new int[256];
@@ -88,11 +93,14 @@ public class App {
                 }
                 if (numerate(data[0]) == numerate("print")) {
                     if (numerate(data[1]) == numerate("str")) {
-                        System.out.println(remove_reinsert_combine('~',' ',str_con));
+                        System.out.println(remove_reinsert_combine('@','\n',remove_reinsert_combine('~',' ',str_con)));
                     }
                     if (numerate(data[1]) == numerate("int")) {
                         System.out.println(int_con);
                     }
+                }
+                if (numerate(data[0]) == numerate("inp")) {
+                    str_cells[Integer.parseInt(data[1])] = reader.readLine();
                 }
             }
             myReader.close();
@@ -139,10 +147,16 @@ public class App {
     {
         String end = "";
         String[] amt = inp.split(remove+"");
-        for (int i = 0; i < amt.length-1; i++) {
-            end += amt[i]+reinsert;
+        if (amt.length >1)
+        {
+            for (int i = 0; i < amt.length-1; i++) {
+                end += amt[i]+reinsert;
+            }
+            end += amt[amt.length-1];
+        }else
+        {
+            end = inp;
         }
-        end += amt[amt.length-1];
         return(end);
     }
 }
